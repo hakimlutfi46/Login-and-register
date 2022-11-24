@@ -86,7 +86,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setText("Don't have account yet?");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 280, 130, 16);
+        jLabel5.setBounds(70, 280, 140, 16);
 
         btn_reg.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btn_reg.setForeground(new java.awt.Color(208, 4, 226));
