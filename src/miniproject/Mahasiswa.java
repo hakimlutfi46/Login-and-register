@@ -31,14 +31,6 @@ public class Mahasiswa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbl_nim.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
-        lbl_nim.setText(".");
-        lbl_nim.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                lbl_nimPropertyChange(evt);
-            }
-        });
-
         btn_logout.setBackground(new java.awt.Color(244, 67, 54));
         btn_logout.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btn_logout.setForeground(new java.awt.Color(255, 255, 255));
@@ -52,7 +44,7 @@ public class Mahasiswa extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
-        jLabel3.setText("WELCOME");
+        jLabel3.setText("                   WELCOME");
         jLabel3.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jLabel3PropertyChange(evt);
@@ -64,24 +56,16 @@ public class Mahasiswa extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btn_logout)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl_nim, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))))
+                .addContainerGap(285, Short.MAX_VALUE)
+                .addComponent(btn_logout)
+                .addContainerGap())
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(151, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_nim)
-                    .addComponent(jLabel3))
+                .addComponent(jLabel3)
                 .addGap(119, 119, 119)
                 .addComponent(btn_logout)
                 .addGap(15, 15, 15))
@@ -95,10 +79,6 @@ public class Mahasiswa extends javax.swing.JFrame {
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_btn_logoutActionPerformed
-
-    private void lbl_nimPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lbl_nimPropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lbl_nimPropertyChange
 
     private void jLabel3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel3PropertyChange
         // TODO add your handling code here:
@@ -149,6 +129,5 @@ public class Mahasiswa extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_logout;
     private javax.swing.JLabel jLabel3;
-    public static final javax.swing.JLabel lbl_nim = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 }

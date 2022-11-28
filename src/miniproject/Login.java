@@ -5,9 +5,9 @@
 package miniproject;
 
 //import com.mysql.cj.jdbc.ConnectionImpl;
+//import static miniproject.Mahasiswa.lbl_nim;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
-import static miniproject.Mahasiswa.lbl_nim;
 
 /**
  *
@@ -46,10 +46,10 @@ public class Login extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jLabel1.setText("NIM");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(64, 95, 77, 16);
+        jLabel1.setBounds(64, 95, 77, 19);
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
         jLabel2.setText("Password");
@@ -77,18 +77,19 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(txt_nim);
         txt_nim.setBounds(64, 118, 201, 30);
 
-        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
         jLabel3.setText("Login");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(138, 36, 65, 30);
         getContentPane().add(txt_pass);
         txt_pass.setBounds(64, 176, 201, 30);
 
+        jLabel5.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jLabel5.setText("Don't have account yet?");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 280, 140, 16);
+        jLabel5.setBounds(60, 280, 150, 19);
 
-        btn_reg.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btn_reg.setFont(new java.awt.Font("Poppins SemiBold", 1, 12)); // NOI18N
         btn_reg.setForeground(new java.awt.Color(208, 4, 226));
         btn_reg.setText("Register");
         btn_reg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,25 +98,21 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_reg);
-        btn_reg.setBounds(210, 280, 47, 16);
+        btn_reg.setBounds(210, 280, 60, 16);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("E:\\Kuliah koding\\img\\photo-1579546929518-9e396f3cc809.jpeg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/photo-1579546929518-9e396f3cc809.jpeg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 363, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel1);
@@ -144,9 +141,7 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login berhasil");
                 this.setVisible(false);
                 new Mahasiswa().setVisible(true);
-                
-                lbl_nim.setText(rs.getString(1));
-                
+                         
             }else{
                 JOptionPane.showMessageDialog(null, "nim atau password salah");
             }

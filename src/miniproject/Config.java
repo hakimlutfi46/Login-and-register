@@ -10,14 +10,10 @@ package miniproject;
  * @author ROG
  */
 
-//import com.mysql.cj.jdbc.Driver;
-//import .*;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-//import java.sql.Statement;
 import java.sql.SQLException;
-
-
 
 
 public class Config {
